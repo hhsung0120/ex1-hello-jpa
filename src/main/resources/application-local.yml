@@ -28,10 +28,10 @@ logging:
     org.hibernate.SQL: trace
 
   file:
-    name: D:${file.separator}logs${file.separator}eatthis${file.separator}eatthis.log
+    name: D:${file.separator}logs${file.separator}jpa${file.separator}jpa.log
   logback:
     rollingpolicy:
       max-history: 7
       max-file-size: 10MB
 
-default-upload-path: D:${file.separator}upload${file.separator}eatthis${file.separator}
+default-upload-path: D:${file.separator}upload${file.separator}jpa${file.separator}
