@@ -18,11 +18,13 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     open-in-view: false
+    hibernate:
+      ddl-auto: create
     properties:
       hibernate:
         show-sql: true
         format_sql: true
-        ddl-auto: none
+
 
 
   #DB configuration
@@ -31,4 +33,3 @@ spring:
       map-underscore-to-camel-case: true
     mapper-locations:
       - mapper/*.xml
-    type-aliases-package: co.kr.heeseong.eatthis.model
