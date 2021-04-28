@@ -1,0 +1,37 @@
+--- #local
+spring:
+  config:
+    activate:
+      on-profile: local
+
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://127.0.0.1:3306/chatting?characterEncoding=UTF-8&serverTimezone=Asia/Seoul&verifyServerCertificate=false&useSSL=false
+    username: root
+    password: root1234
+    hikari:
+      poolName: Hikari
+      maximum-pool-size: 10
+      max-lifetime: 1800000
+      auto-commit: false
+      data-source-properties:
+        cachePrepStmts: true
+        prepStmtCacheSize: 250
+        prepStmtCacheSqlLimit: 2048
+        useServerPrepStmts: true
+
+logging:
+  level:
+    org.springframework.web: info
+    co.kr.heeseong: info
+    org.hibernate.type: trace
+    org.hibernate.SQL: trace
+
+  file:
+    name: D:${file.separator}logs${file.separator}eatthis${file.separator}eatthis.log
+  logback:
+    rollingpolicy:
+      max-history: 7
+      max-file-size: 10MB
+
+default-upload-path: D:${file.separator}upload${file.separator}eatthis${file.separator}
