@@ -4,15 +4,18 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Getter
 @Setter
 @Entity
-@Table(name="member")
-public class Member {
+@Table(name="test_object")
+public class TestObject {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     @Column(name="name", insertable = true, updatable = true, length = 10) //등록, 변경 가능 여부 옵션, 자릿수 10
@@ -36,6 +39,10 @@ public class Member {
     @Lob
     private String description;
 
-    public Member(){}
+    //최신버전이면 어노테이션 필요 없음 그냥 이렇게 사용해요 내부적으로 하이버네이트가 매핑해줌
+    private LocalDate localDate;
+    private LocalDateTime localdateTime;
+
+    public TestObject(){}
 
 }
