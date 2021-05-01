@@ -12,7 +12,10 @@ public class Member {
 
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "member_id")
-    private long id;
+    private Long id;
+
+    @Column(name = "team_id")
+    private Long teamId;
 
     private String name;
 

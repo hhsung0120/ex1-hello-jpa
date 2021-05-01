@@ -1,23 +1,20 @@
 package jpabasic.ex1hellojpa.controller;
 
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
+import jpabasic.ex1hellojpa.service.JpaService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.persistence.Persistence;
 
 @RestController
 public class HomeController {
 
-    @Qualifier("entityTest")
-    LocalContainerEntityManagerFactoryBean lc;
-
+    final private JpaService jpaService;
+    private HomeController(JpaService jpaService){
+        this.jpaService = jpaService;
+    }
 
     @GetMapping("/")
     public String home(){
-        Persistence.createEntityManagerFactory(lc.getPersistenceUnitName());
-
+        jpaService.createTest();
         return "JPA Example";
     }
 }
