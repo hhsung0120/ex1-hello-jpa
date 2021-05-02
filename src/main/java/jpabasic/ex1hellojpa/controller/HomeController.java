@@ -14,7 +14,8 @@ public class HomeController {
 
     @GetMapping("/")
     public String home(){
-        jpaService.createTest();
+        //jpaService.createTest();
+        jpaService.createMember();
         return "JPA Example";
     }
 }
