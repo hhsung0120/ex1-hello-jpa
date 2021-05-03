@@ -18,4 +18,10 @@ public class HomeController {
         jpaService.createMember();
         return "JPA Example";
     }
+
+    @GetMapping("/members")
+    public String members(){
+        jpaService.selectMember();
+        return "JPA Example";
+    }
 }

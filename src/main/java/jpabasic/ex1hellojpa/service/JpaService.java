@@ -6,6 +6,9 @@ import jpabasic.ex1hellojpa.repository.JpaTestRepository;
 import jpabasic.ex1hellojpa.repository.MemberRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.Optional;
+
 @Service
 public class JpaService {
 
@@ -37,10 +40,22 @@ public class JpaService {
         Team team = new Team();
         team.setName("A 팀");
 
-        System.out.println(member.getId());
         member.setTeam(team);
-        System.out.println(member.getId());
         memberRepository.save(member);
         System.out.println(member.getId());
     }
+
+    public void selectMember(){
+        Optional<Member> byId = memberRepository.findById(1L);
+        System.out.println(byId.get().toString());
+        List<Member> members = byId.get().getTeam().getMembers();
+
+        for(Member m : members){
+            System.out.println(m.getName());
+        }
+
+
+
+    }
+
 }
