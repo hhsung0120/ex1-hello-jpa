@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+
 @Service
 public class JpaService {
 
@@ -47,14 +48,11 @@ public class JpaService {
 
     public void selectMember(){
         Optional<Member> byId = memberRepository.findById(1L);
-        System.out.println(byId.get().toString());
         List<Member> members = byId.get().getTeam().getMembers();
 
-        for(Member m : members){
-            System.out.println(m.getName());
+        for (Member member1 : members) {
+            System.out.println(member1.getName());
         }
-
-
 
     }
 
