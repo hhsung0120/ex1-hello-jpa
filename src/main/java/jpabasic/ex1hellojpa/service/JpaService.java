@@ -54,6 +54,8 @@ public class JpaService {
             System.out.println(member1.getName());
         }
 
+
+
     }
 
 }
