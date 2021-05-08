@@ -1,7 +1,5 @@
 package jpabasic.ex1hellojpa.domain;
 
-import com.sun.istack.NotNull;
-import com.sun.istack.Nullable;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -14,7 +12,7 @@ import java.time.LocalDateTime;
 public class Orders {
 
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="order_id")
+    @Column(name = "order_id")
     private Long id;
 
     //이렇게 하면 문제가 있다.
@@ -23,12 +21,12 @@ public class Orders {
     //그래야 객체 그래프 탐색이 가능하며 참조가 없으므로 UML도 잘못 되었음, 현재 구조는 테이블 설계에 맞춘 방식
     //@Column(name="member_id")
     //private Long memberId;
-
     @ManyToOne
+    @JoinColumn(name = "member_id")
     private Member member;
+
+    private LocalDateTime orderDate;
 
     @Enumerated(EnumType.STRING)
     private OrderStatus status;
-
-    private LocalDateTime orderDate;
 }
