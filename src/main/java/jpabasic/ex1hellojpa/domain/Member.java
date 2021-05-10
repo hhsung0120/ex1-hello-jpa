@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter
@@ -24,6 +26,14 @@ public class Member {
     @JoinColumn(name = "team_id")
     @ManyToOne(cascade = CascadeType.ALL)
     private Team team;
+
+    //좋지 않은 구조이지만 예제니까 넣었음
+    //Orders에 member_id 가 있기 때문에 orders 테이블만 보면 된다 굳이 member 가 orderList 를 가지고 있을 필요 없음
+    //김영한님은 이렇게 짠 코드는 나쁜코드라고 했음, 주문따로 회원따로 보는게 맞다고 하심
+    @OneToMany(mappedBy = "member")
+    List<Orders> orderList = new ArrayList<>();
+
+
 
     private String name;
 
