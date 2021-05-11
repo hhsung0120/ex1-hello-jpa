@@ -23,6 +23,7 @@ public class Member {
     //어노테이션은 디비매핑을 하기 위한것이기때문에 디비 입장에서 작성
     //insert 시점에 cascade = CascadeType.ALL 옵션이 없으면 member 객체에서 FK로 쓰이는 값이 아직 생기지(Long id) 않아서
     //TransientPropertyValueException 오류 발생생
+    //다대일 단방향 연관관계 가장 많이 쓰임
     @JoinColumn(name = "team_id")
     @ManyToOne(cascade = CascadeType.ALL)
     private Team team;
