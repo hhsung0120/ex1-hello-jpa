@@ -34,6 +34,9 @@ public class Member {
     @OneToMany(mappedBy = "member")
     List<Orders> orderList = new ArrayList<>();
 
+    @OneToOne
+    @JoinColumn(name = "lockere_id")
+    private Locker locker;
 
 
     private String name;
