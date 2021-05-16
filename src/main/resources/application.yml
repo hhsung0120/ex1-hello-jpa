@@ -20,13 +20,12 @@ spring:
     open-in-view: false
     hibernate:
       ddl-auto: create
+      #ddl-auto: none
 
     properties:
       hibernate:
         show-sql: true
         format_sql: true
-
-
 
   #DB configuration
   mybatis:

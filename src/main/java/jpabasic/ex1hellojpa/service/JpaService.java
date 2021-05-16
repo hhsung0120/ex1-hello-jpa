@@ -1,24 +1,29 @@
 package jpabasic.ex1hellojpa.service;
 
 import jpabasic.ex1hellojpa.domain.Member;
+import jpabasic.ex1hellojpa.domain.Movie;
 import jpabasic.ex1hellojpa.domain.Team;
 import jpabasic.ex1hellojpa.repository.JpaTestRepository;
 import jpabasic.ex1hellojpa.repository.MemberRepository;
+import jpabasic.ex1hellojpa.repository.MovieRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-
 
 @Service
 public class JpaService {
 
     final private JpaTestRepository jpaTestRepository;
     final private MemberRepository memberRepository;
+    final private MovieRepository movieRepository;
+
     private JpaService(JpaTestRepository jpaTestRepository
-                     , MemberRepository memberRepository){
+            , MemberRepository memberRepository
+            , MovieRepository movieRepository){
         this.jpaTestRepository = jpaTestRepository;
         this.memberRepository = memberRepository;
+        this.movieRepository = movieRepository;
     }
 
     public void createTest() {
@@ -58,4 +63,14 @@ public class JpaService {
 
     }
 
+    public void saveMovie() {
+        Movie movie = new Movie();
+        movie.setDirector("aaa");
+        movie.setActor("bbb");
+        movie.setName("바람과 함께사라지다");
+        movie.setPrice(10000);
+
+        movieRepository.save(movie);
+    }
 }
+

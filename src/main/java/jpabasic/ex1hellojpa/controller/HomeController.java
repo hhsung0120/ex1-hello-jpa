@@ -24,4 +24,15 @@ public class HomeController {
         jpaService.selectMember();
         return "JPA Example";
     }
+
+    @GetMapping("/movie")
+    public String movieTest(){
+        jpaService.saveMovie();
+        return "movie Example";
+    }
+
+
+
+
+
 }
