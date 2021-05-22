@@ -34,9 +34,9 @@ public class Member extends BaseEntity{
     @OneToMany(mappedBy = "member")
     List<Orders> orderList = new ArrayList<>();
 
-    @OneToOne
+/*    @OneToOne
     @JoinColumn(name = "lockere_id")
-    private Locker locker;
+    private Locker locker;*/
 
 
     private String name;

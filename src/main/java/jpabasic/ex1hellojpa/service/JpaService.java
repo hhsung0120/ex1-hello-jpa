@@ -60,7 +60,6 @@ public class JpaService {
         }
 
 
-
     }
 
     public void saveMovie() {

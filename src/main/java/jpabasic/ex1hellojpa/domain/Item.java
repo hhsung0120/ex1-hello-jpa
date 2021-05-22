@@ -25,6 +25,7 @@ import java.util.List;
 //        primary key (item_id)
 //    ) engine=InnoDB
 @DiscriminatorColumn(name = "type_test") //Dtype 있는게 좋다고 하심 컬럼 이름을 변경하려면 name 을 주면 된다.
+// name 이 없으면 디폴트로 상속을받은 테이블 이름 값이 들어간다
 public class Item {
 
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
