@@ -25,7 +25,7 @@ public class Member extends BaseEntity{
     //TransientPropertyValueException 오류 발생생
     //다대일 단방향 연관관계 가장 많이 쓰임
     @JoinColumn(name = "team_id")
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Team team;
 
     //좋지 않은 구조이지만 예제니까 넣었음

@@ -33,6 +33,6 @@ public class Team {
     //양방향은 거의 사용하지 않으며, 단방향으로 설계를 끝내야하고, 양방향은 필요하면 그때 추가
     //연관관계 주인은 !!! 외래키가 있는 쪽으로 한다 ex: Member 객체
     //다대일 양방향 연관관계
-    @OneToMany(mappedBy = "team", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "team")
     private List<Member> members = new ArrayList<>();
 }

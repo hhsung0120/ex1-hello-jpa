@@ -59,11 +59,13 @@ public class JpaService {
 
     public void selectMember(){
         Optional<Member> byId = memberRepository.findById(1L);
-        List<Member> members = byId.get().getTeam().getMembers();
 
-        for (Member member1 : members) {
+        System.out.println("쿼리 다 날리나");
+        List<Member> members = byId.get().getTeam().getMembers();
+        System.out.println("쿼리 다 날리나2");
+/*        for (Member member1 : members) {
             System.out.println(member1.getName());
-        }
+        }*/
 
 
     }
