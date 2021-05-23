@@ -6,25 +6,31 @@ import jpabasic.ex1hellojpa.domain.Team;
 import jpabasic.ex1hellojpa.repository.JpaTestRepository;
 import jpabasic.ex1hellojpa.repository.MemberRepository;
 import jpabasic.ex1hellojpa.repository.MovieRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
+@Transactional
+@RequiredArgsConstructor
+//@AllArgsConstructor 을 사용하지 않는 이유는 모든 필드를 생성자 파라메터로 만들기 때문, @value 등 baen 에서 관리되지 않는 객체를 선언시 오류
+//final 로 생성된 것들만 생성자 파라메터로 관리하기 위해 @RequiredArgsConstructor 사용
 public class JpaService {
 
     final private JpaTestRepository jpaTestRepository;
     final private MemberRepository memberRepository;
     final private MovieRepository movieRepository;
 
-    private JpaService(JpaTestRepository jpaTestRepository
+    /*private JpaService(JpaTestRepository jpaTestRepository
             , MemberRepository memberRepository
             , MovieRepository movieRepository){
         this.jpaTestRepository = jpaTestRepository;
         this.memberRepository = memberRepository;
         this.movieRepository = movieRepository;
-    }
+    }*/
 
     public void createTest() {
         Team team = new Team();
