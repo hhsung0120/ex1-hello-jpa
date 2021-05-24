@@ -33,6 +33,14 @@ public class Team {
     //양방향은 거의 사용하지 않으며, 단방향으로 설계를 끝내야하고, 양방향은 필요하면 그때 추가
     //연관관계 주인은 !!! 외래키가 있는 쪽으로 한다 ex: Member 객체
     //다대일 양방향 연관관계
+    //orphanRemoval = true 옵션은 members 컬렉션에서 remove 된 애를 db 에서도 삭제 한다. 오팔리므발
+    //주의사항!!! 참조하는 곳이 하나일 때 사용해야함; 특정 엔티티가 개인 소유할 때, @OneToOne, @OneToMany
+    //고아객체란 부모를 삭제하면 자식은 고아가 된다. 따라서 오팔리므발을 true 하게 되면 부모를 제거할 때 자식도 함께 제거 된다.
     @OneToMany(mappedBy = "team")
     private List<Member> members = new ArrayList<>();
+
+    public void addMember(Member member){
+        members.add(member);
+        member.setTeam(this);
+    }
 }
