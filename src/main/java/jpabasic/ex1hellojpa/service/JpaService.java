@@ -3,6 +3,8 @@ package jpabasic.ex1hellojpa.service;
 import jpabasic.ex1hellojpa.domain.Member;
 import jpabasic.ex1hellojpa.domain.Movie;
 import jpabasic.ex1hellojpa.domain.Team;
+import jpabasic.ex1hellojpa.domain.common.Address;
+import jpabasic.ex1hellojpa.domain.common.Period;
 import jpabasic.ex1hellojpa.repository.JpaTestRepository;
 import jpabasic.ex1hellojpa.repository.MemberRepository;
 import jpabasic.ex1hellojpa.repository.MovieRepository;
@@ -20,9 +22,9 @@ import java.util.Optional;
 //final 로 생성된 것들만 생성자 파라메터로 관리하기 위해 @RequiredArgsConstructor 사용
 public class JpaService {
 
-    final private JpaTestRepository jpaTestRepository;
-    final private MemberRepository memberRepository;
-    final private MovieRepository movieRepository;
+    private final JpaTestRepository jpaTestRepository;
+    private final MemberRepository memberRepository;
+    private final MovieRepository movieRepository;
 
     /*private JpaService(JpaTestRepository jpaTestRepository
             , MemberRepository memberRepository
@@ -46,8 +48,10 @@ public class JpaService {
     public void createMember() {
         Member member = new Member();
         member.setName("홍길동");
-        member.setCity("서울");
-        member.setZipcode("1234");
+//        member.setCity("서울");
+//        member.setZipcode("1234");
+        member.setHomeAddress(new Address("test1","test2","test3"));
+        member.setWorkPeriod(new Period());
 
         Team team = new Team();
         team.setName("A 팀");

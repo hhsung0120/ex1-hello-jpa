@@ -1,5 +1,7 @@
 package jpabasic.ex1hellojpa.domain;
 
+import jpabasic.ex1hellojpa.domain.common.Address;
+import jpabasic.ex1hellojpa.domain.common.Period;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,6 +17,8 @@ public class Member extends BaseEntity{
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "member_id")
     private Long id;
+
+    private String name;
 
     /*@Column(name = "team_id")
     private Long teamId;*/
@@ -45,11 +49,29 @@ public class Member extends BaseEntity{
     private Locker locker;*/
 
 
-    private String name;
+    //기간 Period
+    /* private LocalDateTime startDate;
+    private LocalDateTime endDate;*/
+    @Embedded
+    private Period workPeriod;
 
-    private String city;
-
+    //주소
+    /*private String city;
     private String street;
+    private String zipcode;*/
+    @Embedded
+    private Address homeAddress;
 
-    private String zipcode;
+    //한 엔티티에서 같은 타입을 동시에 사용할때 @AttributeOverrides 를 사용하면 된다
+    @Embedded
+    @AttributeOverrides({
+            @AttributeOverride(name="city",
+                    column=@Column(name = "WORK_CITY")),
+            @AttributeOverride(name="street",
+                    column=@Column(name = "WORK_STREET")),
+            @AttributeOverride(name="zipcode",
+                    column=@Column(name = "WORK_ZIPCODE"))
+    })
+    private Address homeAddress2;
+
 }
