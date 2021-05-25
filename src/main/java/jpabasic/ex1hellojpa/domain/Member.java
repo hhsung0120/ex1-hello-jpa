@@ -7,7 +7,9 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -73,5 +75,17 @@ public class Member extends BaseEntity{
                     column=@Column(name = "WORK_ZIPCODE"))
     })
     private Address homeAddress2;
+
+    //값타입 컬렉선 예제
+    //엔티티로 만들지 않아도 테이블 생성된다.
+    //컬렉션 데이터들은 1:다 로 풀어서 저장해야 한다
+    @ElementCollection
+    @CollectionTable(name = "favorite_food", joinColumns = @JoinColumn(name = "member_id"))
+    @Column(name = "food_name")
+    private Set<String> favoriteFoods = new HashSet<>();
+
+    @ElementCollection
+    @CollectionTable(name = "address", joinColumns = @JoinColumn(name = "member_id"))
+    private List<Address> addressHistory = new ArrayList<>();
 
 }
