@@ -57,6 +57,14 @@ public class JpaService {
         team.setName("A 팀");
 
         member.setTeam(team);
+
+        //컬렉션 저장
+        member.getFavoriteFoods().add("치킨");
+        member.getFavoriteFoods().add("피자");
+        member.getFavoriteFoods().add("족발");
+        member.getAddressHistory().add(new Address("old1","old1","old1"));
+        member.getAddressHistory().add(new Address("old2","old2","old2"));
+
         memberRepository.save(member);
         System.out.println(member.getId());
     }
