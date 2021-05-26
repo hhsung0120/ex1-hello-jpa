@@ -79,13 +79,25 @@ public class Member extends BaseEntity{
     //값타입 컬렉선 예제
     //엔티티로 만들지 않아도 테이블 생성된다.
     //컬렉션 데이터들은 1:다 로 풀어서 저장해야 한다
+    //값타입 컬렉션은 모든 키를 묶어서 기본키로 구성해야한다 null X 중복저장 X
+    //remove 할 경우 전체를 삭제하고 컬렉션 갯수 만큼 다시 저장을한다.
+    //또한 삭제를 할경우 해쉬가 안맞으면 쿼리 자체는
+    //delete from address where member_id = ?  형식으로 쿼리가 나가지만 실제로는 호출된 값과 삭제 하려는 값을
+    //해쉬로 비교하여 일치하는것만 삭제 한다, (여기서 !! 해쉬코드, 이퀄스 함수가 제대로 구현이 되 있어야함)
+    //위험하기때문에 실무에선 1대다로 풀어서 사용
+    //어떨때 사용하냐면 내가 좋아하는 음식이 뭔지 저장할때 ex 체크박스 타입, 셀렉트박스 타입
     @ElementCollection
     @CollectionTable(name = "favorite_food", joinColumns = @JoinColumn(name = "member_id"))
     @Column(name = "food_name")
     private Set<String> favoriteFoods = new HashSet<>();
 
+
+
     @ElementCollection
     @CollectionTable(name = "address", joinColumns = @JoinColumn(name = "member_id"))
     private List<Address> addressHistory = new ArrayList<>();
+
+
+
 
 }

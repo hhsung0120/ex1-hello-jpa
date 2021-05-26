@@ -14,6 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 @Service
 @Transactional
@@ -73,8 +74,14 @@ public class JpaService {
         Optional<Member> byId = memberRepository.findById(1L);
 
         System.out.println("쿼리 다 날리나");
-        List<Member> members = byId.get().getTeam().getMembers();
+        //List<Member> members = byId.get().getTeam().getMembers();
         System.out.println("쿼리 다 날리나2");
+
+        Set<String> favoriteFoods = byId.get().getFavoriteFoods();
+        for(String t : favoriteFoods){
+            System.out.println(t);
+        }
+
 /*        for (Member member1 : members) {
             System.out.println(member1.getName());
         }*/
@@ -89,6 +96,21 @@ public class JpaService {
         movie.setPrice(10000);
 
         movieRepository.save(movie);
+    }
+
+    //삭제
+    public void entityDelete(){
+        Optional<Member> byId = memberRepository.findById(1L);
+
+        byId.get().getFavoriteFoods().remove("치킨");
+        byId.get().getFavoriteFoods().add("츼킌");
+
+        //hashCode, equals 메서드를 제대로 구현하지 않으면 hash 비교가 안돼서 삭제가 안된다 !!! 주의 !!
+        byId.get().getAddressHistory().remove(new Address("old3","old3","old3"));
+
+        //저장은 된다
+        byId.get().getAddressHistory().add(new Address("old5","old4","old4"));
+
     }
 }
 

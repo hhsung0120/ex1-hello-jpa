@@ -25,6 +25,12 @@ public class HomeController {
         return "JPA Example";
     }
 
+    @GetMapping("/delete")
+    public String delete(){
+        jpaService.entityDelete();
+        return "JPA Example";
+    }
+
     @GetMapping("/movie")
     public String movieTest(){
         jpaService.saveMovie();

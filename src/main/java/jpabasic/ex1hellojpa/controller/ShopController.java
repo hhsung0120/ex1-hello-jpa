@@ -10,9 +10,6 @@ public class ShopController {
     @GetMapping("/shop/index")
     public String shopHome(){
         Member member = new Member();
-
-
-
         return "22";
     }
 }
