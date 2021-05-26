@@ -5397,3 +5397,102 @@ BUILD SUCCESSFUL in 1s
 2021-05-26T00:20:11.652+0900 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
 2021-05-26T00:20:11.652+0900 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
 2021-05-26T00:20:11.653+0900 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2021-05-26T00:20:21.655+0900 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2021-05-26T00:20:21.655+0900 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2021-05-26T00:20:21.655+0900 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2021-05-26T00:20:21.656+0900 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2021-05-26T00:20:21.656+0900 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2021-05-26T00:20:21.657+0900 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2021-05-26T00:20:21.657+0900 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2021-05-26T00:20:21.657+0900 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2021-05-26T00:20:21.657+0900 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2021-05-26T00:20:27.470+0900 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Accepted connection from /127.0.0.1:65011 to /127.0.0.1:63809.
+2021-05-26T00:20:27.473+0900 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 428: received class org.gradle.launcher.daemon.protocol.StopWhenIdle
+2021-05-26T00:20:27.473+0900 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 428: Received non-IO message from client: StopWhenIdle[id=7f40f4eb-5657-4385-8a38-9b77f3c2cd6b]
+2021-05-26T00:20:27.473+0900 [INFO] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received command: StopWhenIdle[id=7f40f4eb-5657-4385-8a38-9b77f3c2cd6b].
+2021-05-26T00:20:27.473+0900 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Starting executing command: StopWhenIdle[id=7f40f4eb-5657-4385-8a38-9b77f3c2cd6b] with connection: socket connection from /127.0.0.1:63809 to /127.0.0.1:65011.
+2021-05-26T00:20:27.474+0900 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Storing daemon stop event: stop command received
+2021-05-26T00:20:27.474+0900 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Storing daemon stop event with timestamp 1621956027474
+2021-05-26T00:20:27.475+0900 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2021-05-26T00:20:27.475+0900 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2021-05-26T00:20:27.476+0900 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2021-05-26T00:20:27.476+0900 [LIFECYCLE] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Daemon will be stopped at the end of the build stop command received
+2021-05-26T00:20:27.476+0900 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Marking daemon stopped due to stop command received. The daemon is running a build: false
+2021-05-26T00:20:27.476+0900 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon has stopped.
+2021-05-26T00:20:27.476+0900 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 427: dispatching Success[value=null]
+2021-05-26T00:20:27.476+0900 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] stop() called on daemon
+2021-05-26T00:20:27.477+0900 [INFO] [org.gradle.launcher.daemon.server.Daemon] Stop requested. Daemon is removing its presence from the registry...
+2021-05-26T00:20:27.477+0900 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Finishing executing command: StopWhenIdle[id=7f40f4eb-5657-4385-8a38-9b77f3c2cd6b]
+2021-05-26T00:20:27.477+0900 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 428: received class org.gradle.launcher.daemon.protocol.Finished
+2021-05-26T00:20:27.477+0900 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Removing our presence to clients, eg. removing this address from the registry: [5602f2f3-17d5-4e32-867e-92867f64783b port:63809, addresses:[localhost/127.0.0.1]]
+2021-05-26T00:20:27.477+0900 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 428: Received non-IO message from client: org.gradle.launcher.daemon.protocol.Finished@3cf03065
+2021-05-26T00:20:27.477+0900 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Removing daemon address: [5602f2f3-17d5-4e32-867e-92867f64783b port:63809, addresses:[localhost/127.0.0.1]]
+2021-05-26T00:20:27.477+0900 [DEBUG] [org.gradle.internal.remote.internal.inet.SocketConnection] Discarding EOFException: java.io.EOFException
+2021-05-26T00:20:27.477+0900 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received finished message: org.gradle.launcher.daemon.protocol.Finished@3cf03065
+2021-05-26T00:20:27.477+0900 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 428: received null
+2021-05-26T00:20:27.477+0900 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 427: stopping connection
+2021-05-26T00:20:27.477+0900 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 428: Received end-of-input from client.
+2021-05-26T00:20:27.478+0900 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2021-05-26T00:20:27.478+0900 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 427: stopping connection
+2021-05-26T00:20:27.478+0900 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2021-05-26T00:20:27.482+0900 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2021-05-26T00:20:27.482+0900 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Address removed from registry.
+2021-05-26T00:20:27.484+0900 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for jars (D:\workspace\ex1-hello-jpa\caches\jars-8)
+2021-05-26T00:20:27.484+0900 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on jars (D:\workspace\ex1-hello-jpa\caches\jars-8).
+2021-05-26T00:20:27.484+0900 [DEBUG] [org.gradle.cache.internal.DefaultPersistentDirectoryStore] jars (D:\workspace\ex1-hello-jpa\caches\jars-8) has last been fully cleaned up 24 hours ago
+2021-05-26T00:20:27.486+0900 [DEBUG] [org.gradle.cache.internal.AbstractCacheCleanup] jars (D:\workspace\ex1-hello-jpa\caches\jars-8) cleanup deleted 0 files/directories.
+2021-05-26T00:20:27.486+0900 [INFO] [org.gradle.cache.internal.LeastRecentlyUsedCacheCleanup] jars (D:\workspace\ex1-hello-jpa\caches\jars-8) removing files not accessed on or after Tue May 18 22:48:32 KST 2021.
+2021-05-26T00:20:27.489+0900 [DEBUG] [org.gradle.cache.internal.AbstractCacheCleanup] jars (D:\workspace\ex1-hello-jpa\caches\jars-8) cleanup deleted 0 files/directories.
+2021-05-26T00:20:27.489+0900 [INFO] [org.gradle.cache.internal.DefaultPersistentDirectoryStore] jars (D:\workspace\ex1-hello-jpa\caches\jars-8) cleaned up in 0.004 secs.
+2021-05-26T00:20:27.489+0900 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for file content cache (D:\workspace\ex1-hello-jpa\caches\6.8.3\fileContent)
+2021-05-26T00:20:27.489+0900 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache annotation-processors.bin (D:\workspace\ex1-hello-jpa\caches\6.8.3\fileContent\annotation-processors.bin)
+2021-05-26T00:20:27.490+0900 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on file content cache (D:\workspace\ex1-hello-jpa\caches\6.8.3\fileContent).
+2021-05-26T00:20:27.490+0900 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for Java compile cache (D:\workspace\ex1-hello-jpa\caches\6.8.3\javaCompile)
+2021-05-26T00:20:27.490+0900 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache jarAnalysis.bin (D:\workspace\ex1-hello-jpa\caches\6.8.3\javaCompile\jarAnalysis.bin)
+2021-05-26T00:20:27.490+0900 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on Java compile cache (D:\workspace\ex1-hello-jpa\caches\6.8.3\javaCompile).
+2021-05-26T00:20:27.491+0900 [DEBUG] [org.gradle.cache.internal.DefaultPersistentDirectoryStore] Artifact transforms cache (D:\workspace\ex1-hello-jpa\caches\transforms-3) has last been fully cleaned up 24 hours ago
+2021-05-26T00:20:27.491+0900 [INFO] [org.gradle.cache.internal.LeastRecentlyUsedCacheCleanup] Artifact transforms cache (D:\workspace\ex1-hello-jpa\caches\transforms-3) removing files not accessed on or after Tue May 18 22:48:32 KST 2021.
+2021-05-26T00:20:27.491+0900 [DEBUG] [org.gradle.cache.internal.AbstractCacheCleanup] Artifact transforms cache (D:\workspace\ex1-hello-jpa\caches\transforms-3) cleanup deleted 0 files/directories.
+2021-05-26T00:20:27.492+0900 [INFO] [org.gradle.cache.internal.DefaultPersistentDirectoryStore] Artifact transforms cache (D:\workspace\ex1-hello-jpa\caches\transforms-3) cleaned up in 0.0 secs.
+2021-05-26T00:20:27.492+0900 [DEBUG] [org.gradle.cache.internal.DefaultCacheAccess] Cache Artifact transforms cache (D:\workspace\ex1-hello-jpa\caches\transforms-3) was closed 0 times.
+2021-05-26T00:20:27.492+0900 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for artifact cache (D:\workspace\ex1-hello-jpa\caches\modules-2)
+2021-05-26T00:20:27.492+0900 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache module-metadata.bin (D:\workspace\ex1-hello-jpa\caches\modules-2\metadata-2.97\module-metadata.bin)
+2021-05-26T00:20:27.492+0900 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache module-artifact.bin (D:\workspace\ex1-hello-jpa\caches\modules-2\metadata-2.97\module-artifact.bin)
+2021-05-26T00:20:27.492+0900 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache module-artifacts.bin (D:\workspace\ex1-hello-jpa\caches\modules-2\metadata-2.97\module-artifacts.bin)
+2021-05-26T00:20:27.492+0900 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on artifact cache (D:\workspace\ex1-hello-jpa\caches\modules-2).
+2021-05-26T00:20:27.493+0900 [DEBUG] [org.gradle.cache.internal.DefaultPersistentDirectoryStore] artifact cache (D:\workspace\ex1-hello-jpa\caches\modules-2) has last been fully cleaned up 24 hours ago
+2021-05-26T00:20:27.493+0900 [DEBUG] [org.gradle.cache.internal.AbstractCacheCleanup] artifact cache (D:\workspace\ex1-hello-jpa\caches\modules-2) cleanup deleted 0 files/directories.
+2021-05-26T00:20:27.494+0900 [DEBUG] [org.gradle.cache.internal.AbstractCacheCleanup] artifact cache (D:\workspace\ex1-hello-jpa\caches\modules-2) [subdir: D:\workspace\ex1-hello-jpa\caches\modules-2\resources-2.1] cleanup deleted 0 files/directories.
+2021-05-26T00:20:27.494+0900 [INFO] [org.gradle.cache.internal.LeastRecentlyUsedCacheCleanup] artifact cache (D:\workspace\ex1-hello-jpa\caches\modules-2) [subdir: D:\workspace\ex1-hello-jpa\caches\modules-2\resources-2.1] removing files not accessed on or after Sun Apr 25 22:48:34 KST 2021.
+2021-05-26T00:20:27.494+0900 [DEBUG] [org.gradle.cache.internal.AbstractCacheCleanup] artifact cache (D:\workspace\ex1-hello-jpa\caches\modules-2) [subdir: D:\workspace\ex1-hello-jpa\caches\modules-2\resources-2.1] cleanup deleted 0 files/directories.
+2021-05-26T00:20:27.495+0900 [DEBUG] [org.gradle.cache.internal.AbstractCacheCleanup] artifact cache (D:\workspace\ex1-hello-jpa\caches\modules-2) [subdir: D:\workspace\ex1-hello-jpa\caches\modules-2\files-2.1] cleanup deleted 0 files/directories.
+2021-05-26T00:20:27.495+0900 [INFO] [org.gradle.cache.internal.LeastRecentlyUsedCacheCleanup] artifact cache (D:\workspace\ex1-hello-jpa\caches\modules-2) [subdir: D:\workspace\ex1-hello-jpa\caches\modules-2\files-2.1] removing files not accessed on or after Sun Apr 25 22:48:34 KST 2021.
+2021-05-26T00:20:27.527+0900 [INFO] [org.gradle.cache.internal.LoggingEvictionListener] Cache entries evicted. In-memory cache of D:\workspace\ex1-hello-jpa\caches\journal-1\file-access.bin: Size{382} MaxSize{400}, CacheStats{hitCount=151, missCount=143, loadSuccessCount=144, loadExceptionCount=0, totalLoadTime=7078200, evictionCount=1} 
+Performance may suffer from in-memory cache misses. Increase max heap size of Gradle build process to reduce cache misses.
+2021-05-26T00:20:27.536+0900 [INFO] [org.gradle.cache.internal.LoggingEvictionListener] Cache entries evicted. In-memory cache of D:\workspace\ex1-hello-jpa\caches\journal-1\file-access.bin: Size{400} MaxSize{400}, CacheStats{hitCount=164, missCount=201, loadSuccessCount=202, loadExceptionCount=0, totalLoadTime=9161600, evictionCount=41} 
+Performance may suffer from in-memory cache misses. Increase max heap size of Gradle build process to reduce cache misses.
+2021-05-26T00:20:27.540+0900 [INFO] [org.gradle.cache.internal.LoggingEvictionListener] Cache entries evicted. In-memory cache of D:\workspace\ex1-hello-jpa\caches\journal-1\file-access.bin: Size{400} MaxSize{400}, CacheStats{hitCount=170, missCount=241, loadSuccessCount=242, loadExceptionCount=0, totalLoadTime=10258700, evictionCount=81} 
+Performance may suffer from in-memory cache misses. Increase max heap size of Gradle build process to reduce cache misses.
+2021-05-26T00:20:27.544+0900 [INFO] [org.gradle.cache.internal.LoggingEvictionListener] Cache entries evicted. In-memory cache of D:\workspace\ex1-hello-jpa\caches\journal-1\file-access.bin: Size{400} MaxSize{400}, CacheStats{hitCount=170, missCount=281, loadSuccessCount=282, loadExceptionCount=0, totalLoadTime=11439700, evictionCount=121} 
+Performance may suffer from in-memory cache misses. Increase max heap size of Gradle build process to reduce cache misses.
+2021-05-26T00:20:27.548+0900 [INFO] [org.gradle.cache.internal.LoggingEvictionListener] Cache entries evicted. In-memory cache of D:\workspace\ex1-hello-jpa\caches\journal-1\file-access.bin: Size{400} MaxSize{400}, CacheStats{hitCount=170, missCount=321, loadSuccessCount=322, loadExceptionCount=0, totalLoadTime=12608400, evictionCount=161} 
+Performance may suffer from in-memory cache misses. Increase max heap size of Gradle build process to reduce cache misses.
+2021-05-26T00:20:27.552+0900 [DEBUG] [org.gradle.cache.internal.AbstractCacheCleanup] artifact cache (D:\workspace\ex1-hello-jpa\caches\modules-2) [subdir: D:\workspace\ex1-hello-jpa\caches\modules-2\files-2.1] cleanup deleted 0 files/directories.
+2021-05-26T00:20:27.553+0900 [DEBUG] [org.gradle.cache.internal.AbstractCacheCleanup] artifact cache (D:\workspace\ex1-hello-jpa\caches\modules-2) [subdir: D:\workspace\ex1-hello-jpa\caches\modules-2\metadata-2.97] cleanup deleted 0 files/directories.
+2021-05-26T00:20:27.553+0900 [INFO] [org.gradle.cache.internal.DefaultPersistentDirectoryStore] artifact cache (D:\workspace\ex1-hello-jpa\caches\modules-2) cleaned up in 0.06 secs.
+2021-05-26T00:20:27.553+0900 [DEBUG] [org.gradle.cache.internal.DefaultCacheAccess] Cache Generated Gradle JARs cache (D:\workspace\ex1-hello-jpa\caches\6.8.3\generated-gradle-jars) was closed 0 times.
+2021-05-26T00:20:27.554+0900 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for journal cache (D:\workspace\ex1-hello-jpa\caches\journal-1)
+2021-05-26T00:20:27.554+0900 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache file-access.bin (D:\workspace\ex1-hello-jpa\caches\journal-1\file-access.bin)
+2021-05-26T00:20:27.554+0900 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on journal cache (D:\workspace\ex1-hello-jpa\caches\journal-1).
+2021-05-26T00:20:27.554+0900 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for file hash cache (D:\workspace\ex1-hello-jpa\caches\6.8.3\fileHashes)
+2021-05-26T00:20:27.555+0900 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache fileHashes.bin (D:\workspace\ex1-hello-jpa\caches\6.8.3\fileHashes\fileHashes.bin)
+2021-05-26T00:20:27.555+0900 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache resourceHashesCache.bin (D:\workspace\ex1-hello-jpa\caches\6.8.3\fileHashes\resourceHashesCache.bin)
+2021-05-26T00:20:27.555+0900 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on file hash cache (D:\workspace\ex1-hello-jpa\caches\6.8.3\fileHashes).
+2021-05-26T00:20:27.555+0900 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for execution history cache (D:\workspace\ex1-hello-jpa\caches\6.8.3\executionHistory)
+2021-05-26T00:20:27.555+0900 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on execution history cache (D:\workspace\ex1-hello-jpa\caches\6.8.3\executionHistory).
+2021-05-26T00:20:27.557+0900 [DEBUG] [org.gradle.cache.internal.VersionSpecificCacheCleanupAction] Processed version-specific caches at D:\workspace\ex1-hello-jpa\caches for cleanup in 0.0 secs
+Daemon vm is shutting down... The daemon has exited normally or was terminated in response to a user interrupt.
+2021-05-26T00:20:27.559+0900 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Removing daemon address: [5602f2f3-17d5-4e32-867e-92867f64783b port:63809, addresses:[localhost/127.0.0.1]]
+2021-05-26T00:20:27.560+0900 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2021-05-26T00:20:27.560+0900 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2021-05-26T00:20:27.562+0900 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
