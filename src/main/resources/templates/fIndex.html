@@ -8,6 +8,27 @@
 fastcampus main
 <form method="post" th:action="@{/saveCompany}"
     th:object="${companyInputDto}">
+    <div class="form-group">
+        <label for="companyNation">Company Nation</label>
+        <input th:name="companyNation"
+               type="text"
+               id="companyNation"
+               class="form-control"
+               name="companyNation"/>
+    </div>
+    <div class="form-group">
+        <label for="companyNation">Company Name</label>
+        <input th:name="companyName"
+               type="text"
+               id="companyName"
+               class="form-control"
+               name="companyName"/>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block">
+            REGISTER
+        </button>
+    </div>
 
 </form>
 
