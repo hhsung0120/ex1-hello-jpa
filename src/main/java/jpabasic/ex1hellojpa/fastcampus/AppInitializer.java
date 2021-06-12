@@ -20,13 +20,13 @@ public class AppInitializer {
         Company company = new Company();
         company.setUpdateAt(new Date());
         company.setCreaeteAt(new Date());
-        company.setGetCompanyNation("이탈리아");
+        company.setCompanyNation("이탈리아");
         company.setCompanyName("페라리");
 
         Company company1 = new Company();
         company1.setUpdateAt(new Date());
         company1.setCreaeteAt(new Date());
-        company1.setGetCompanyNation("이름 초기 시작 ?");
+        company1.setCompanyNation("이름 초기 시작 ?");
         company1.setCompanyName("오 초기 시작 하면서 되나 ");
 
         companyService.save(company);

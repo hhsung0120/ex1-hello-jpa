@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+companyList
+<table border="1">
+    <tr>
+        <th>idx</th>
+        <th>company name</th>
+        <th>company nation</th>
+    </tr>
+    <tr th:each="company:${companyList}">
+        <td th:text="${company.id}"></td>
+        <td th:text="${company.companyName}"></td>
+        <td th:text="${company.companyNation}"></td>
+    </tr>
+</table>
+
+<nav style="text-align: center">
+    <ul th:with = "start=${T(Math).floor(companyList.number/10) * 10 + 1},
+                   last=(${start + 9 < companyList.totalPages ? start + 9 : companyList.totalPages})">
+    </ul>
+    <li>
+        <a th:href="@{./companyList(page=1)}" aria-label="First"><span>FIRST</span></a>
+    </li>
+</nav>
+</body>
+</html>
