@@ -70,13 +70,13 @@ public class JpaService {
     }
 
     public void selectMember(){
-        Optional<Member> byId = memberRepository.findById(1L);
+        Member member = memberRepository.findById(1L).get();
 
         System.out.println("쿼리 다 날리나");
         //List<Member> members = byId.get().getTeam().getMembers();
         System.out.println("쿼리 다 날리나2");
 
-        Set<String> favoriteFoods = byId.get().getFavoriteFoods();
+        Set<String> favoriteFoods = member.getFavoriteFoods();
         for(String t : favoriteFoods){
             System.out.println(t);
         }
