@@ -67,7 +67,6 @@ public class JpaService {
 
         memberRepository.save(member);
         System.out.println(member.getId());
-
     }
 
     public void selectMember(){
